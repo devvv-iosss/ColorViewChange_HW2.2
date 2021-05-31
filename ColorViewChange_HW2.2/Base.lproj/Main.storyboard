@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColorViewChange_HW2_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController2" customModule="ColorViewChange_HW2_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,20 +52,14 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FiE-db-gyZ">
                                         <rect key="frame" x="-2" y="0.0" width="226" height="31"/>
                                         <connections>
-                                            <action selector="rgbSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="DKn-to-4XV"/>
+                                            <action selector="RGBSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="W90-Bj-sUi"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zHC-U6-s2h">
                                         <rect key="frame" x="-2" y="46" width="226" height="31"/>
-                                        <connections>
-                                            <action selector="rgbSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="OF7-BF-agS"/>
-                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Uf-Qb-rnj">
                                         <rect key="frame" x="-2" y="92" width="226" height="31"/>
-                                        <connections>
-                                            <action selector="rgbSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="KUC-gL-Qpk"/>
-                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -97,7 +91,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.65783100660000005" green="0.97015066169999997" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="3BS-ut-7F6" firstAttribute="top" secondItem="cUq-Tm-AuO" secondAttribute="bottom" constant="50" id="3Vf-9P-Acv"/>
                             <constraint firstItem="hEh-gS-n2n" firstAttribute="top" secondItem="cUq-Tm-AuO" secondAttribute="bottom" constant="48" id="9Kn-kO-Gai"/>
@@ -113,13 +107,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueLabelValue" destination="10z-Az-I2h" id="KKc-Qy-Ibj"/>
-                        <outlet property="blueSlider" destination="3Uf-Qb-rnj" id="l1Y-57-GWv"/>
-                        <outlet property="colorView" destination="cUq-Tm-AuO" id="kil-Dl-9HT"/>
-                        <outlet property="greenLabelValue" destination="a8K-hn-ZgR" id="Juq-8R-lK2"/>
-                        <outlet property="greenSlider" destination="zHC-U6-s2h" id="8u9-4L-Wmo"/>
-                        <outlet property="redLabelValue" destination="Ymg-bl-Pbi" id="GHo-sv-LGX"/>
-                        <outlet property="redSlider" destination="FiE-db-gyZ" id="Nbz-DS-qvA"/>
+                        <outlet property="blue" destination="3Uf-Qb-rnj" id="W8t-y4-Vd4"/>
+                        <outlet property="blueQuantity" destination="10z-Az-I2h" id="kHO-8T-daQ"/>
+                        <outlet property="green" destination="zHC-U6-s2h" id="GXC-Z9-ic1"/>
+                        <outlet property="greenQuantity" destination="a8K-hn-ZgR" id="Tas-ow-3uA"/>
+                        <outlet property="red" destination="FiE-db-gyZ" id="ikV-Au-Xvj"/>
+                        <outlet property="redQuantity" destination="Ymg-bl-Pbi" id="xMd-Pa-ppa"/>
+                        <outlet property="resultView" destination="cUq-Tm-AuO" id="IkM-UW-hVy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -130,6 +124,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
