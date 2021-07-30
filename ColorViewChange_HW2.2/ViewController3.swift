@@ -37,6 +37,7 @@ class ViewController3: UIViewController {
 
         RGBFunc()
         setValue(for: redQuantity, greenQuantity, blueQuantity)
+        
     }
     
     @IBAction func sliderAct(_ sender: UISlider) {
@@ -46,6 +47,7 @@ class ViewController3: UIViewController {
         case red: setValue(for: redQuantity)
         case green: setValue(for: greenQuantity)
         default: setValue(for: blueQuantity)
+            
         }
     }
     
@@ -67,30 +69,17 @@ class ViewController3: UIViewController {
                 label.text = String(Int(green.value))
             default:
                 label.text = String(Int(blue.value))
+          
             }
         }
     }
 
-    
-    
-//    private func setValue(for labels: UILabel...) {
-//        labels.forEach { label in
-//            switch label {
-//            case redQuantity:
-//                label.text = string(from: red)
-//            case greenQuantity:
-//                label.text = string(from: green)
-//            default:
-//                label.text = string(from: blue)
-//            }
-//        }
-//    }
-//
-//    // Значения RGB
-//    private func string(from slider: UISlider) -> String {
-//        String(Int(slider.value))
-//        //конвертируем строку из слайдера
-//    }
+
+    // Значения RGB
+    private func string(from slider: UISlider) -> String {
+        String(Int(slider.value))
+        //конвертируем строку из слайдера
+    }
 }
 
  
