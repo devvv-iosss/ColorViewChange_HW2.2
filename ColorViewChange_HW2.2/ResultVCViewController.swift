@@ -21,7 +21,9 @@ class ResultVCViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultVC = segue.destination as! ViewController2
         resultVC.delegate = self
-    }}
+        resultVC.resultV = view.backgroundColor
+    }
+}
 
 extension ResultVCViewController: TransferColorDelegate {
     func transferColor(_ color: UIColor) {

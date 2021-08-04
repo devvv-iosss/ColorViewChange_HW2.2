@@ -128,19 +128,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hEh-gS-n2n">
                                 <rect key="frame" x="137" y="474" width="222" height="122"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="FiE-db-gyZ">
+                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FiE-db-gyZ">
                                         <rect key="frame" x="-2" y="0.0" width="226" height="31"/>
                                         <connections>
                                             <action selector="sliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="ABa-a7-ylS"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zHC-U6-s2h">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zHC-U6-s2h">
                                         <rect key="frame" x="-2" y="46" width="226" height="31"/>
                                         <connections>
                                             <action selector="sliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="AuQ-6f-pXh"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3Uf-Qb-rnj">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Uf-Qb-rnj">
                                         <rect key="frame" x="-2" y="92" width="226" height="31"/>
                                         <connections>
                                             <action selector="sliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="asB-m3-rd3"/>
@@ -148,6 +148,14 @@
                                     </slider>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gb-fZ-b4H">
+                                <rect key="frame" x="168.66666666666666" y="799" width="90.999999999999972" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="brI-V9-vph"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -156,6 +164,7 @@
                             <constraint firstItem="9fa-Cu-HUc" firstAttribute="leading" secondItem="hEh-gS-n2n" secondAttribute="trailing" constant="8" id="0vu-Oh-TBz"/>
                             <constraint firstItem="cUq-Tm-AuO" firstAttribute="centerX" secondItem="SWO-1T-mXy" secondAttribute="centerX" id="5d5-OX-fEg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SWO-1T-mXy" secondAttribute="bottom" constant="139" id="D38-ic-ayO"/>
+                            <constraint firstItem="8Gb-fZ-b4H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JAp-5w-Uuj"/>
                             <constraint firstItem="hEh-gS-n2n" firstAttribute="top" secondItem="cUq-Tm-AuO" secondAttribute="bottom" constant="40" id="MYW-mv-yAR"/>
                             <constraint firstItem="9fa-Cu-HUc" firstAttribute="top" secondItem="cUq-Tm-AuO" secondAttribute="bottom" constant="40" id="SmD-1j-9u1"/>
                             <constraint firstItem="hEh-gS-n2n" firstAttribute="leading" secondItem="gxg-34-xU0" secondAttribute="trailing" constant="8" id="ZD8-zw-nyN"/>
@@ -163,6 +172,7 @@
                             <constraint firstItem="3BS-ut-7F6" firstAttribute="top" secondItem="cUq-Tm-AuO" secondAttribute="bottom" constant="40" id="dLf-m3-Xry"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cUq-Tm-AuO" secondAttribute="trailing" constant="16" id="f07-Zd-YJh"/>
                             <constraint firstItem="3BS-ut-7F6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="f3j-6U-hK9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Gb-fZ-b4H" secondAttribute="bottom" constant="36" id="hHR-E8-RTj"/>
                             <constraint firstItem="cUq-Tm-AuO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nb5-sg-13k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9fa-Cu-HUc" secondAttribute="bottom" constant="294" id="oZE-Ya-g7n"/>
                             <constraint firstItem="cUq-Tm-AuO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sen-hv-KjX"/>
@@ -184,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1400.8" y="60.719640179910051"/>
+            <point key="canvasLocation" x="1433" y="60"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="org-CF-HKJ">
